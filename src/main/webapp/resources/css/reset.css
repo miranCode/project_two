@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* reset 에서 각 태그에 기본적으로 부여된 스타일을 초기화한다. */
+a, abbr, acronym, address, applet, article, aside, audio,
+b, blockquote, big, body,
+center, canvas, caption, cite, code, command,
+datalist, dd, del, details, dfn, dl, div, dt,
+em, embed,
+fieldset, figcaption, figure, font, footer, form,
+h1, h2, h3, h4, h5, h6, header, hgroup, html,
+i, iframe, img, ins,
+kbd,
+keygen,
+label, legend, li,
+meter,
+nav, menu,
+object, ol, output,
+p, pre, progress,
+q,
+s, samp, section, small, span, source, strike, strong, sub, sup,
+table, tbody, td, tfoot, thead, th, tr, td, video, tt,
+u, ul,
+var {
+    margin:0;
+    padding:0;
+    border:0;
+    vertical-align:baseline;
+    font-size:100%;
+    font:inherit;
+}
+
+body {
+    font-size:75%;
+    color:#303030;
+    line-height:1.5em;
+}
+
+h1, h2, h3, h4, h5, h6,
+table, tr, th, td,
+input, button, select, textarea {
+    font-size:1em;
+}
+body, input, button, select, textarea, sub {
+    font-family:"Noto Sans CJK KR", "Noto Sans Korean", "Malgun Gothic", dotum, Helvetica, sans-serif;
+}
+em, cite, address, optgroup {
+    font-style:normal;
+}
+kbd, samp, code {
+    font-family:monospace;
+}
+a{color:#303030;}
+a:link, a:visited {text-decoration:none;}
+a:hover, a:focus, a:active {text-decoration:underline;}
+label {
+    cursor:pointer;
+}
+code {
+    display:block;
+}
+
+legend, hr {
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+}
+legend, hr, caption {
+    visibility:hidden;
+    font-size:0;
+    width:0;
+    height:0;
+    line-height:0;
+}
+
+img, input, button, select, textarea {
+    vertical-align:middle;
+}
+ul, ol {
+    list-style:none;
+}
+img, fieldset {
+    border:0;
+}
+abbr, acronym {
+    border-bottom:1px dotted black;
+    cursor:help;
+}
+table {
+    width:100%;
+    border-spacing:0;
+    border-collapse:collapse;
+}
+
+article, aside, audio, canvas, command, datalist, 
+details, embed, figcaption, figure, footer, header, 
+hgroup, keygen, meter, nav, output, progress, section, 
+source, video {
+    display:block;
+}
+mark, rp, rt, 
+ruby, summary, 
+time {
+    display:inline;
+}
+
+blockquote, 
+q {
+    quotes:none;
+}
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after {
+    content:"";
+    content:none;
+}

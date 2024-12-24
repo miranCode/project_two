@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/* 기준 폰트 사이즈 */
+html {width:100%; font-size:10px;}
+
+button,
+a,
+select{cursor: pointer; border:0}
+
+a:hover, a:focus, a:active {text-decoration:none;}
+
+.img-box{position:relative; width:100%; overflow:hidden}
+.img-box img{display: block; object-fit: cover; width:100%; height:100%;}
+
+input,
+input[type=text],
+input[type=password],
+input[type=date]{border:0;}
+
+.select_area{position:relative; display:inline-block; background:#fff; cursor: pointer; min-width:100px; width:140px}
+.select_title{
+	position:relative;
+	border:1px solid #ddd; 
+	background:unset; 
+	padding:0px 40px 0px 10px;
+	height:35px;
+	line-height:35px; 
+	box-sizing:border-box;
+	-webkit-appearance: none;  /* 크롬 화살표 없애기 */
+	-moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+	appearance: none;  /* 화살표 없애기 */
+}
+.select_title span{}
+.select_title i{
+	position: absolute;
+    top: 18px;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
+.select_box{position:absolute; top:35px; left:0; width:100%;}
+.select_box ul{display:none;}
+.select_box ul li{
+	padding:0 10px; 
+	box-sizing:border-box; 
+	height:30px; 
+	line-height:30px; 
+	border:1px solid #ddd; 
+	border-top:0;
+	background:#fff;
+}
+.select_box ul li:hover{background:#f5f5f5}
+
+.open .select_box ul{display:block}
+
+
+.btn{
+	display:block; 
+	width:100%; 
+	text-align:center; 
+	font-size: 14px; 
+	font-weight: 800; 
+	background:rgb(73, 73, 238); 
+	border-radius: 9px; 
+	color: #fff; 
+	border: 1px solid transparent; 
+	transition: all 0.5s;
+}
+.btn.btn-bagic{
+	height: 40px; 
+	line-height: 40px; 
+}
+
+.btn.btn-bagic.line{
+	background:#fff;
+	color:rgb(73, 73, 238);
+	border:1px solid rgb(73, 73, 238);
+	
+}
+
+/* display:flex css */
+.flex{display:flex;}
+.flex.flex-wrap{flex-wrap:wrap;}
+.flex.ju-between{justify-content: space-between;}
+.flex.ju-center{justify-content: center;}
+.flex.ju-end{justify-content: end !important;}
+.flex.ju-around{justify-content: space-around;}
+.flex.ju-evenly{justify-content: space-evenly;}
+.flex.column{flex-direction: column}
+.flex.column-reverse{flex-direction: column-reverse}
+.flex.row{flex-direction: row}
+.flex.row-reverse{flex-direction: row-reverse}
+.flex.al-center{align-items: center;}
+.flex.al-start{align-items: start;}
+.flex.al-end{align-items: end;}
+
+/* 텍스트 공통 스타일 */
+.txt{}
+.txt.tit{font-size: 40px;}
+.txt.titsub{font-size: 30px;}
+.txt.sub{font-size: 20px;}
+.txt.small{font-size: 14px;}
+.txt-center{text-align: center;}
+.txt.bold{font-weight: 600;}
+.txt.bolder{font-weight: 800;}
+.cancle-txt{font-size: 12px; color: #999; text-decoration: line-through red;}
+.txt-info{font-size: 14px;}
+.txt-primary{color: rgb(73, 73, 238)}
+.txt-green{color: #0ac73e;}
+.txt-red{color: red;}
+.txt-gray{color: #999;}
+.txt-yellow{color: yellow;}
+.copy{font-size: 14px; color:#999}
+
+.bg-line{position:relative; padding:0 10px}
+.bg-line:before{content:""; display:block; position:absolute; left:0; bottom:0; width:100%; height:5px; background:rgba(73, 73, 238, 0.2);}
+
+/*...출력*/
+.ell {display:inline-block; max-width:97%; height: auto; overflow:hidden; text-overflow:ellipsis; vertical-align:middle; white-space:nowrap; word-wrap: break-word;  word-break: break-all;}
+.ell.row2 {max-height:4rem; display:-webkit-box; white-space:normal;word-break: normal;-webkit-box-orient:vertical;-webkit-line-clamp:2} /* height 값 조정 */
+.ell.row3 {max-height:6rem; display:-webkit-box; white-space:normal;word-break: normal;-webkit-box-orient:vertical;-webkit-line-clamp:3} /* height 값 조정 */
+.ell.row4 {max-height:8rem; display:-webkit-box; white-space:normal;word-break: normal;-webkit-box-orient:vertical;-webkit-line-clamp:4} /* height 값 조정 */
+
+
+/* 페이지내이션  */
+.pagination{margin-top: 50px;}
+.pagination ul li{width: 35px; height: 35px; box-sizing: border-box;; border: 1px solid #ddd; background: #fff; border-radius: 9px; margin-right: 5px;}
+.pagination ul li a{display: block; width: 100%; height: 100%; text-align: center; line-height: 35px; font-size: 12px; font-weight: 700;}
+
+.pagination ul li.on{ border-color: rgb(73, 73, 238);}
+.pagination ul li.on a{color: rgb(73, 73, 238);}
+.pagination ul li:last-child{margin-right: 0;}
+
+.pagination ul li:hover{background: rgb(73, 73, 238); border-color: rgb(73, 73, 238);}
+.pagination ul li:hover a{color: #fff;}
+
+
+
+.btn-area{margin-top: 20PX;}
+
+.btn-area button,
+.btn-area a{width:100%; height: 40px; font-size: 14px; font-weight: 600; text-align: center; line-height: 39px; background:rgb(73, 73, 238); border-radius: 9px; color: #fff; border: 1px solid transparent; transition: all 0.5s;}
+.btn-area button:hover,
+.btn-area a:hover{color: rgb(73, 73, 238); border-color: rgb(73, 73, 238); background: #fff;}
+
+.btn-area button.line,
+.btn-area a.line{color: rgb(73, 73, 238); border-color: rgb(73, 73, 238); background: #fff;}
+.btn-area button.line:hover,
+.btn-area a.line:hover{color:#fff; border-color: rgb(73, 73, 238); background:rgb(73, 73, 238);}
+
+.btn-area button.red,
+.btn-area a.red{background:rgb(253, 2, 65); border-color:rgb(253, 2, 65); color: #fff;}
+.btn-area button.red:hover,
+.btn-area a.red:hover{color: rgb(253, 2, 65); border-color: rgb(253, 2, 65); background: #fff;}
+
+.btn-area button.red-line,
+.btn-area a.red-line{color: rgb(253, 2, 65); border-color: rgb(253, 2, 65); background: #fff;}
+.btn-area button.red-line:hover,
+.btn-area a.red-line:hover{background:rgb(253, 2, 65); border-color: rgb(253, 2, 65); color: #fff;;}
+
+.btn-area.two,
+.btn-area.three,
+.btn-area.four{display: flex; justify-content: space-between; align-items: center;}
+
+.btn-area.two button,
+.btn-area.two a{width: 45%;}
+
+.btn-area.three button,
+.btn-area.three a{width: 30%;}
+
+.btn-area.four button,
+.btn-area.four a{width: 20%;}
