@@ -178,12 +178,7 @@
 		</dependency>
 		<!-- 컨트롤러 객체타입  -->
 		<!-- @@ResponseBody 사용을 위해 추가  -->
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.9.4</version>
-		</dependency>   
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind --> 
 		<!-- Jackson dependency -->
 	    <dependency>
 	        <groupId>com.fasterxml.jackson.core</groupId>

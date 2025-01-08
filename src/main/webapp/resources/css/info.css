@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.bg-gray{display:block; background:#f5f5f5; padding:5px 10px; box-sizing:border-box; font-size:12px; border:1px solid #ddd; border-radius:5px;}
+
+ul.info{}
+ul.info > li{
+	padding:4%; 
+	box-sizing:border-box; 
+	border:1px solid #ddd; 
+	margin-bottom:20px;
+	box-shadow: 6px 3px 38px 0px rgba(0, 0, 0, 0.1);
+}
+
+ul.info > li > p{font-size:18px; font-weight:800; margin-bottom:20px;}
+ul.info > li > div{}
+ul.info > li dl{margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #ddd;}
+ul.info > li dl:last-child{margin-bottom:0; padding-bottom:0; border-bottom:0;}
+ul.info > li dl dt{margin-bottom:10px; font-weight:600;}
+ul.info > li dl dt span{display:block;}
+ul.info > li dl dd{}
+ul.info > li dl dd ul.flex li{font-size:14px; margin-right:5px;}
+ul.info > li dl dd ul.flex li a.link{display:block; background:#f5f5f5; padding:5px 10px; box-sizing:border-box; font-size:12px; border:1px solid #ddd; border-radius:5px;}
+ul.info > li dl dd ul.flex li a.link:hover{background:#fff; font-weight:600;}
+
+/* flex */
+.flex-area > ul li{margin-bottom:10px; width:100%;}
+.flex-area > ul li p{margin-bottom:5px}
+.flex-area > ul li div.flex{border:5px solid #f5f5f5}
+.flex-area > ul li div.flex div{line-height:20px; width:120px; text-align:center; border:1px solid #ddd; box-sizing:border-box;}
+
+/* img */
+.img-area ul.flex > li{width:18%; margin:0;}
+.img-area ul.flex > li p span{font-size:12px; color:#999}
+
+/* 카피스타일 */
+#copy-style{margin-top:20px; padding:10px 20px; background-color:#f5f5f5;}
+#copy-style > div{padding-bottom:40px;}
+#copy-style > div:last-child{padding-bottom:0}
+#copy-style textarea{width:100%; font-size:14px; min-height:150px; background:#fff;}
+#copy-style > div > div.flex {align-items:center; font-weight:600; margin-bottom:10px; justify-content: space-between;}
+#copy-style > div > div.flex button{font-weight:600;font-size:12px; margin-left:10px; border:0; background-color:#fff; padding:4px 10px; border:1px solid #ddd; cursor:copy;}
+#copy-style > div > div.flex button:hover{background-color:#dbdbdb;}
+
+
+/* sns 스타일 */
+ul.sns-area li{width:6rem; margin-right:1rem; overflow:hidden}
+.icon{position:relative; width:100%; aspect-ratio:1; border-radius:11px; background:#ddd;}
+.icon i{position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); color:#fff; font-size:3rem}
+.icon.kakao{background-color: #ffc000;}
+.icon.naver{background-color:#0ac73e;}
+.icon.instagram{background: radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%), linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);}
+.icon.facebook{background-color: #0082cd;}
+.icon.youtube{background-color: #ff1d1d;}
+.icon.twitter{background-color:#1d9bf0;}

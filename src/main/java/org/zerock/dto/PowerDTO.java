@@ -10,6 +10,7 @@ public class PowerDTO {
     private long powerUsage;
     private long bill;
     private double unitCost;
+    
 	public String getYear() {
 		return year;
 	}

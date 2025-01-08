@@ -20,4 +20,8 @@ public class HomeController {
 		return "home";
 	}
 	
+	@GetMapping(value = "/info")
+	public String info(Locale locale, Model model) {
+		return "html/info";
+	}
 }

@@ -3,6 +3,8 @@
 @import url("./reset.css?after");
 @import url("./style.css?after");
 @import url("./common.css?after");
+@import url("./borad.css?after");
+@import url("./info.css?after");
 
 
 html {width:100%; font-size:10px;} 

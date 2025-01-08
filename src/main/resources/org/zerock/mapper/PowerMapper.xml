@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.PowerMapper">
+	<insert id="insertPower" parameterType="org.zerock.dto.PowerDTO">
+		insert into usepower (year, month, metro, city, cntr, powerUsage, bill, unitCost)
+		values (#{year}, #{month}, #{metro}, #{city}, #{cntr}, #{powerUsage}, #{bill}, #{unitCost})
+	</insert>
+	
+	<select id="selectPower" resultType="Integer">
+		select count(*) from usepower where year = #{year} and month = #{month} and metro = #{metro} and city = #{city} and cntr = #{cntr} and powerUsage = #{powerUsage} and bill = #{bill} and unitCost = #{unitCost};
+	</select>
+	
+	<select id="selectList" resultType="org.zerock.dto.PowerDTO">
+		select * from usepower;
+	</select>
+	
+	<select id="selectCitytList" resultType="org.zerock.dto.PowerDTO">
+		WITH citySummary AS (
+		    SELECT 
+				year as year,
+		        month as month,
+		        metro as metro,
+		        city as city,
+		        '합계' as cntr,
+		        SUM(powerUsage) AS powerUsage, 
+		        SUM(bill) AS bill, 
+		        SUM(unitCost) AS unitCost,
+		        COUNT(*) AS count
+		    FROM usepower
+		    GROUP BY 
+				year, 
+				month, 
+				metro,
+		        city
+			HAVING count > 1
+		)
+		SELECT * FROM citySummary;
+	</select>
+	
+	<select id="selectMetroList" resultType="org.zerock.dto.PowerDTO">
+		WITH metroSummary AS (
+		    SELECT 
+				year as year,
+		        month as month,
+		        metro as metro,
+		        '전체' as city,
+		        '합계' as cntr,
+				SUM(powerUsage) AS powerUsage, 
+		        SUM(bill) AS bill, 
+		        SUM(unitCost) AS unitCost,
+		        COUNT(*) AS count
+		    FROM usepower
+		    GROUP BY 
+				year, 
+				month, 
+				metro
+			HAVING count > 1
+		)
+		SELECT * FROM metroSummary;
+	</select>
+	<select id="selectMetro" resultType="org.zerock.dto.PowerDTO">
+		select count(*), metro from usepower GROUP BY metro;
+	</select>
+	<select id="selectCity" resultType="org.zerock.dto.PowerDTO">
+		select count(*), metro, city from usepower where metro = #{metro} GROUP BY metro, city;
+	</select>
+	<select id="selectCntr" resultType="org.zerock.dto.PowerDTO">
+		select count(*), cntr from usepower GROUP BY cntr;
+	</select>
+</mapper>

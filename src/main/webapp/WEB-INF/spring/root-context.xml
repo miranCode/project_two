@@ -26,8 +26,10 @@
 	</bean>
 	
 	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+	
+	<!-- Jackson ObjectMapper 설정 -->
 	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
-
+	
 	<!-- Component scan -->
 	<mybatis-spring:scan base-package="org.zerock.mapper" />
 	

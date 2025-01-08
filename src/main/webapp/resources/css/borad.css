@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+#selectList,
+#loading{display:none;}
+#loading li{width:100%; text-align: center; padding: 150px 0; border-bottom: 1px solid #ddd;}
+#loading li i{display:block; font-size:30px; margin-bottom:10px}
+
+#selectList.open,
+#loading.open{display:block;}
+
+div.tab-area{border-bottom:3px solid #f5f5f5; padding-bottom:20px}
+div.tab-area div.tit{font-size:14px; color:#999; min-width:60px; padding-top:3px;}
+div.tab-area div.flex{margin-bottom:5px}
+div.tab-area div.flex:last-child{margin-bottom:0}
+
+div.tab{display:flex; flex-wrap:wrap;}
+div.tab button{padding:8px 10px; line-height:1; box-sizing:border-box; border:1px solid #ddd; font-size:12px; border-radius:9px; margin-bottom:5px; margin-right:5px}
+
+div.tab button.on,
+div.tab button:hover{background:#f5f5f5; font-weight:800;}
+
+p.total{font-size:14px; color:#999; margin-top: 30px;}
+ul.table.table-header{margin-top:10px}
+ul.table > li{width: 100%;}
+ul.table.table-header > li{border-top:1px solid #ddd; box-sizing:border-box; background: #f5f5f5; color:#999; font-size: 14px; line-height:1.3}
+ul.table > li.bg-gray{background: #f5f5f5; color:blue;}
+ul.table > li.no-data{width:100%; text-align: center; padding: 150px 0; border-bottom: 1px solid #ddd;}
+ul.table > li ul li{
+	padding:10px; 
+	box-sizing:border-box; 
+	text-align:center; 
+	border:1px solid #ddd;
+	border-top:0;
+	border-right: 0;
+}
+ul.table > li ul li:last-child{border-right:1px solid #ddd;}
+
+ul.table > li ul li:first-child,
+ul.table > li ul li:nth-child(2),
+ul.table > li ul li:nth-child(3),
+ul.table > li ul li:nth-child(5),
+ul.table > li ul li:nth-child(6),
+ul.table > li ul li:last-child{width:calc(40%/5);}
+
+ul.table > li ul li:nth-child(4){width:10%;}
+ul.table > li ul li:nth-child(7),
+ul.table > li ul li:nth-child(8){width:calc(50%/2);}
+
+
+/* 페이지내이션  */
+.pagination{margin-top: 50px;}
+.pagination ul li{width: 35px; height: 35px; box-sizing: border-box;; border: 1px solid #ddd; background: #fff; border-radius: 9px; margin-right: 5px;}
+.pagination ul li a{display: block; width: 100%; height: 100%; text-align: center; line-height: 35px; font-size: 12px; font-weight: 700;}
+
+.pagination ul li.on{ border-color: rgb(73, 73, 238);}
+.pagination ul li.on a{color: rgb(73, 73, 238);}
+.pagination ul li:last-child{margin-right: 0;}
+
+.pagination ul li:hover{background: rgb(73, 73, 238); border-color: rgb(73, 73, 238);}
+.pagination ul li:hover a{color: #fff;}
+

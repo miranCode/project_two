@@ -4,19 +4,23 @@
 <% 
     request.setAttribute("bodyClass", "main");
 %>
-<jsp:include page="./inc/header.jsp" />
-				<script type="text/javascript" src="/resources/js/select.js"></script>
+<jsp:include page="../inc/header.jsp" />
             	<!-- #content 영역 시작 -->
-            	
+            	<script>
+            	$(document).ready(function() {
+            		$('div.tab > button').click(function(){
+            			$(this).addClass('on');
+            			$(this).siblings().removeClass('on');
+            		})
+            	});
+            	</script>
 				<div id="content">
-					<div class="seach-area">
-						<select class="select" id="startYear" name="startYear" title="년도"></select>
-						<select class="select" id="startMonth" name="startMonth" title="월"></select>
-						~
-						<select class="select" id="endYear" name="endYear" title="년도"></select>
-						<select class="select" id="endMonth" name="endMonth" title="월"></select>
+					<div class="tab flex">
+						<button type="button" id="" class="on">전체</button>
+						<button type="button" id="">시군구별</button>
+						<button type="button" id="">시도별</button>
 					</div>
-					<p class="total">Total : <span id="apitotal"></span></p>
+					<p class="total">Total : <span id="apitotal">${apiDataSize}</span></p>
 					<ul class="table table-header">
 						<li>
 					    	<ul class="flex">
@@ -56,6 +60,7 @@
 							</c:otherwise>
 						</c:choose>
 					</ul>
+					<div class="pagination"></div>
 				</div>  
 				<!-- #content 영역 끝 -->
-<jsp:include page="./inc/footer.jsp" />
+<jsp:include page="../inc/footer.jsp" />

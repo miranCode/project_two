@@ -4,7 +4,7 @@
 <% 
     request.setAttribute("bodyClass", "main");
 %>
-<jsp:include page="./inc/header.jsp" />
+<jsp:include page="../inc/header.jsp" />
 				<script type="text/javascript" src="/resources/js/select.js"></script>
             	<!-- #content 영역 시작 -->
             	
@@ -35,18 +35,18 @@
 					<ul class="table" id="selectList">
 						<c:choose>
 							<c:when test="${not empty apiData}">
-								<c:forEach var="list" items="${apiData}" varStatus="no">
+								<c:forEach var="list" items="${apiData}">
 									<li>
 										<ul class="flex">
-											<li><fmt:formatNumber value="${no.index + 1}" groupingUsed="true" /></li>
+											<li>-</li>
 											<li>${list.year}</li>
 											<li>${list.month}</li>
 											<li>${list.metro}</li>
 											<li>${list.city}</li>
 											<li>${list.cntr}</li>
-											<li><fmt:formatNumber value="${list.powerUsage}" groupingUsed="true" /> kWh</li>
-											<li><fmt:formatNumber value="${list.bill}" groupingUsed="true" /> 원</li>
-											<li><fmt:formatNumber value="${list.unitCost}" groupingUsed="true" /> 원</li>
+											<li>${list.powerUsage}</li>
+											<li>${list.bill}</li>
+											<li>${list.unitCost}</li>
 										</ul>
 									</li>
 								</c:forEach>
@@ -58,4 +58,4 @@
 					</ul>
 				</div>  
 				<!-- #content 영역 끝 -->
-<jsp:include page="./inc/footer.jsp" />
+<jsp:include page="../inc/footer.jsp" />

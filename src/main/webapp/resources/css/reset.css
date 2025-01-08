@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /* reset 에서 각 태그에 기본적으로 부여된 스타일을 초기화한다. */
-a, abbr, acronym, address, applet, article, aside, audio,
-b, blockquote, big, body,
+*, a, abbr, acronym, address, applet, article, aside, audio,
+b, blockquote, big, body, button,
 center, canvas, caption, cite, code, command,
 datalist, dd, del, details, dfn, dl, div, dt,
 em, embed,
